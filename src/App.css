@@ -1,0 +1,284 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.9fr);
+  gap: 28px;
+  padding: 32px;
+}
+
+.hero-panel,
+.sidebar-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero-copy,
+.status-text,
+.empty-state,
+.history-meta,
+.card-instruction,
+.ban-help {
+  color: var(--muted);
+}
+
+.hero-copy {
+  max-width: 48ch;
+  margin-bottom: 24px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.discover-button,
+.attribute-pill,
+.ban-chip {
+  border: none;
+  font: inherit;
+}
+
+.discover-button {
+  background: linear-gradient(135deg, #dc6b2f, #f4a340);
+  color: #fffdf7;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+  box-shadow: 0 12px 24px rgba(220, 107, 47, 0.25);
+}
+
+.discover-button:hover:not(:disabled),
+.attribute-pill:hover,
+.ban-chip:hover {
+  transform: translateY(-2px);
+}
+
+.discover-button:disabled {
+  cursor: wait;
+  opacity: 0.8;
+}
+
+.error-message {
+  margin: 0 0 20px;
+  color: #a43320;
+  background: #fde5dd;
+  border: 1px solid #f3b3a3;
+  padding: 14px 16px;
+  border-radius: 16px;
+}
+
+.dog-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.image-wrap {
+  min-height: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.65), transparent 50%),
+    linear-gradient(180deg, #f4c98d, #efd7b5);
+}
+
+.dog-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  background: var(--panel-soft);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.card-label {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.card-instruction {
+  margin: 12px 0 0;
+}
+
+.attribute-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.attribute-pill {
+  text-align: left;
+  background: #fffdf7;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: inset 0 0 0 1px rgba(62, 43, 31, 0.08);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.attribute-pill span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.attribute-pill strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.attribute-pill:not(.static-pill) {
+  cursor: pointer;
+}
+
+.attribute-pill:not(.static-pill):hover {
+  box-shadow: inset 0 0 0 2px rgba(220, 107, 47, 0.35);
+}
+
+.static-pill {
+  cursor: default;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.is-banned {
+  background: #ffe3d2;
+  box-shadow: inset 0 0 0 2px rgba(220, 107, 47, 0.45);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-panel {
+  padding: 24px;
+}
+
+.panel-heading {
+  margin-bottom: 18px;
+}
+
+.panel-heading h3,
+.history-title {
+  margin: 0;
+}
+
+.ban-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ban-help {
+  margin: 14px 0 0;
+}
+
+.ban-chip {
+  background: #3e2b1f;
+  color: #fff8ef;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.history-list {
+  display: grid;
+  gap: 14px;
+}
+
+.history-card {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 18px;
+  background: var(--panel-soft);
+}
+
+.history-image {
+  width: 88px;
+  height: 88px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .dog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .image-wrap {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-panel,
+  .sidebar-panel {
+    border-radius: 22px;
+  }
+
+  .hero-panel,
+  .sidebar-panel,
+  .card-content {
+    padding: 20px;
+  }
+
+  .actions,
+  .attribute-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .attribute-grid {
+    display: grid;
+  }
+}

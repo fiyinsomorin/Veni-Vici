@@ -1,0 +1,71 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #26180f;
+  background:
+    radial-gradient(circle at top, rgba(255, 244, 220, 0.9), transparent 35%),
+    linear-gradient(180deg, #f8eddc 0%, #f4e2c7 45%, #ecd2ac 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text: #26180f;
+  --muted: #6e5848;
+  --accent: #b54c1b;
+  --border: rgba(67, 41, 25, 0.12);
+  --panel: rgba(255, 250, 241, 0.78);
+  --panel-soft: rgba(255, 244, 228, 0.92);
+  --shadow: 0 24px 60px rgba(95, 60, 30, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
